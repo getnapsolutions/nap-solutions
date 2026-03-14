@@ -32,7 +32,10 @@ watch(
 )
 
 onMounted(() => document.addEventListener('keydown', onKeydown))
-onUnmounted(() => document.removeEventListener('keydown', onKeydown))
+onUnmounted(() => {
+  document.removeEventListener('keydown', onKeydown)
+  document.body.style.overflow = ''
+})
 </script>
 
 <template>
@@ -52,7 +55,7 @@ onUnmounted(() => document.removeEventListener('keydown', onKeydown))
             <div>
               <span class="modal-title">BOOK A DEMO</span>
               <p class="modal-subtitle">
-                NAP Solutions — Free 30-min call
+                NAP Solutions - Free 30-min call
               </p>
             </div>
           </div>
@@ -81,7 +84,7 @@ onUnmounted(() => document.removeEventListener('keydown', onKeydown))
   position: fixed;
   inset: 0;
   z-index: 9999;
-  background: rgba(10,15,30,0.7);
+  background: rgba(10, 15, 30, 0.7);
   backdrop-filter: blur(6px);
   display: flex;
   align-items: center;
@@ -97,7 +100,7 @@ onUnmounted(() => document.removeEventListener('keydown', onKeydown))
   display: flex;
   flex-direction: column;
   overflow: hidden;
-  box-shadow: 0 40px 100px rgba(0,0,0,0.3);
+  box-shadow: 0 40px 100px rgba(0, 0, 0, 0.3);
   animation: fadeUp 0.3s ease;
 }
 .modal-header {
@@ -105,7 +108,7 @@ onUnmounted(() => document.removeEventListener('keydown', onKeydown))
   align-items: center;
   justify-content: space-between;
   padding: 18px 28px;
-  border-bottom: 1px solid rgba(10,15,30,0.08);
+  border-bottom: 1px solid rgba(10, 15, 30, 0.08);
   flex-shrink: 0;
   background: #fff;
 }
@@ -118,8 +121,8 @@ onUnmounted(() => document.removeEventListener('keydown', onKeydown))
   width: 34px;
   height: 34px;
   border-radius: 9px;
-  background: linear-gradient(135deg, rgba(0,212,192,0.15), rgba(123,47,255,0.15));
-  border: 1px solid rgba(123,47,255,0.2);
+  background: linear-gradient(135deg, rgba(0, 212, 192, 0.15), rgba(123, 47, 255, 0.15));
+  border: 1px solid rgba(123, 47, 255, 0.2);
   display: flex;
   align-items: center;
   justify-content: center;
@@ -139,7 +142,7 @@ onUnmounted(() => document.removeEventListener('keydown', onKeydown))
 }
 .modal-close {
   background: none;
-  border: 1.5px solid rgba(10,15,30,0.08);
+  border: 1.5px solid rgba(10, 15, 30, 0.08);
   border-radius: 50%;
   width: 36px;
   height: 36px;
@@ -159,5 +162,44 @@ onUnmounted(() => document.removeEventListener('keydown', onKeydown))
   flex: 1;
   width: 100%;
   border: none;
+}
+
+@media (max-width: 768px) {
+  .modal-overlay {
+    padding: 0;
+    align-items: flex-end;
+  }
+
+  .modal-box {
+    max-width: none;
+    height: min(92vh, 820px);
+    border-radius: 18px 18px 0 0;
+  }
+
+  .modal-header {
+    padding: 14px 16px;
+  }
+
+  .modal-subtitle {
+    line-height: 1.4;
+  }
+}
+
+@media (max-width: 520px) {
+  .modal-box {
+    height: 100vh;
+    border-radius: 0;
+  }
+
+  .modal-title {
+    letter-spacing: 1px;
+    font-size: 12px;
+  }
+
+  .modal-icon {
+    width: 30px;
+    height: 30px;
+    font-size: 13px;
+  }
 }
 </style>

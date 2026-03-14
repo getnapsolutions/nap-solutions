@@ -284,4 +284,54 @@ const noResults = computed(() => visibleItems.value.length === 0)
     text-align: center;
   }
 }
+
+@media (max-width: 640px) {
+  .faq-search-wrap {
+    margin-bottom: 28px;
+  }
+
+  .faq-tabs {
+    flex-wrap: nowrap;
+    overflow-x: auto;
+    padding-bottom: 8px;
+    margin-right: calc(var(--gutter) * -0.2);
+    -webkit-overflow-scrolling: touch;
+  }
+
+  .faq-tab {
+    white-space: nowrap;
+    font-size: 14px;
+    padding: 9px 16px;
+  }
+
+  .faq-q {
+    padding: 16px;
+    font-size: 15px;
+    line-height: 1.45;
+  }
+
+  .faq-a {
+    font-size: 14px;
+    line-height: 1.7;
+    padding: 0 16px;
+  }
+
+  .faq-item.open .faq-a {
+    padding: 0 16px 16px;
+  }
+
+  .faq-cta {
+    margin-top: 34px;
+    padding: 24px 16px;
+    gap: 16px;
+  }
+
+  .faq-cta-text h3 {
+    font-size: 16px;
+  }
+
+  .faq-cta-text p {
+    font-size: 15px;
+  }
+}
 </style>

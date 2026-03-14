@@ -42,7 +42,7 @@ import { functionCards } from '../data/howItWorksData'
 }
 .functions-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(min(100%, 240px), 1fr));
   gap: 18px;
   margin-top: clamp(1.8rem, 5vw, 3rem);
 }
@@ -100,5 +100,20 @@ import { functionCards } from '../data/howItWorksData'
   color: #8892b0;
   line-height: 2;
   letter-spacing: 1px;
+}
+
+@media (max-width: 640px) {
+  .func-card {
+    padding: 20px 16px;
+  }
+
+  .func-card h3 {
+    font-size: 16px;
+  }
+
+  .func-card p {
+    font-size: 14px;
+    line-height: 1.7;
+  }
 }
 </style>

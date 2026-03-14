@@ -67,4 +67,22 @@ import { solutionItems } from '../data/solutionData'
   color: #4a5580;
   text-wrap: pretty;
 }
+
+@media (max-width: 640px) {
+  .solution-item {
+    padding: 16px 16px;
+    gap: 12px;
+  }
+
+  .solution-item p {
+    font-size: 15px;
+    line-height: 1.62;
+  }
+
+  .sol-check {
+    width: 30px;
+    height: 30px;
+    font-size: 13px;
+  }
+}
 </style>

@@ -46,6 +46,7 @@
 .cost-scroll {
   overflow-x: auto;
   padding-bottom: 10px;
+  -webkit-overflow-scrolling: touch;
 }
 .cost-row {
   display: flex;
@@ -112,9 +113,28 @@
   .cost-row {
     flex-direction: column;
   }
+  .cost-cell {
+    min-width: 0;
+  }
   .cost-op {
     padding: 10px 0;
     justify-content: center;
+  }
+}
+
+@media (max-width: 640px) {
+  .cost-cell {
+    padding: 24px 14px;
+  }
+
+  .cost-lbl {
+    font-size: 13px;
+    letter-spacing: 0.04em;
+  }
+
+  .cost-note {
+    font-size: 16px;
+    line-height: 1.7;
   }
 }
 </style>

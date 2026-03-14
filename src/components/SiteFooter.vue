@@ -77,8 +77,8 @@ function scrollTo(id) {
       </div>
 
       <div class="footer-bottom">
-        <span>&copy; 2026 NAP SOLUTIONS · ALL RIGHTS RESERVED</span>
-        <span class="footer-tagline">BOOK · ANSWER · AUTOMATE</span>
+        <span>&copy; 2026 NAP SOLUTIONS Â· ALL RIGHTS RESERVED</span>
+        <span class="footer-tagline">BOOK Â· ANSWER Â· AUTOMATE</span>
       </div>
     </div>
   </footer>
@@ -212,6 +212,35 @@ function scrollTo(id) {
 @media (max-width: 960px) {
   .footer-grid {
     grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 640px) {
+  .footer-wordmark {
+    font-size: 14px;
+    letter-spacing: 0.14em;
+  }
+
+  .footer-brand p,
+  .footer-col li {
+    font-size: 15px;
+  }
+
+  .social-row {
+    gap: 14px;
+  }
+
+  .social-link {
+    font-size: 14px;
+  }
+
+  .footer-bottom {
+    justify-content: center;
+    text-align: center;
+  }
+
+  .footer-tagline {
+    letter-spacing: 0.16em;
   }
 }
 </style>

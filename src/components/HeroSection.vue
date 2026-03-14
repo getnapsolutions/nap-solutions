@@ -77,7 +77,7 @@ function scrollToHow() {
 }
 .hero-inner {
   display: grid;
-  grid-template-columns: minmax(0, 1fr) minmax(260px, 340px);
+  grid-template-columns: minmax(0, 1fr) minmax(240px, 320px);
   align-items: center;
   gap: clamp(2rem, 6vw, 5rem);
 }
@@ -293,17 +293,57 @@ h1 {
 }
 
 @media (max-width: 960px) {
+  .hero {
+    min-height: auto;
+    padding-block: 6.5rem 4.2rem;
+  }
+
   .hero-inner {
     grid-template-columns: 1fr;
+    gap: 1.4rem;
   }
+
   .hero-right {
     justify-self: start;
-    margin-top: 12px;
+    margin-top: 8px;
   }
+
+  .orb-card {
+    width: 220px;
+    height: 220px;
+  }
+
+  .orb-core {
+    width: 170px;
+    height: 170px;
+  }
+
   .chip1,
   .chip2,
   .chip3 {
     display: none;
+  }
+}
+
+@media (max-width: 760px) {
+  .hero-right {
+    display: none;
+  }
+
+  .hero-sub {
+    margin-bottom: 28px;
+  }
+
+  .always-on-pill {
+    margin-bottom: 24px;
+  }
+}
+
+@media (max-width: 520px) {
+  .hero-actions {
+    flex-direction: column;
+    align-items: stretch;
+    gap: 12px;
   }
 }
 </style>

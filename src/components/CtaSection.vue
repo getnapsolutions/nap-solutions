@@ -93,7 +93,7 @@ async function submitForm() {
             {{ sending ? 'Sending...' : 'Send Message' }}
           </button>
         </form>
-        <div class="cta-disclaimer">NO CONTRACTS · CANCEL ANYTIME</div>
+        <div class="cta-disclaimer">NO CONTRACTS Â· CANCEL ANYTIME</div>
       </div>
     </div>
   </section>
@@ -197,5 +197,30 @@ async function submitForm() {
   color: #8892b0;
   margin-top: 16px;
   letter-spacing: 1px;
+}
+
+@media (max-width: 640px) {
+  .cta-sub {
+    font-size: 16px;
+    line-height: 1.72;
+    margin-bottom: 30px;
+  }
+
+  .cta-btn {
+    width: 100%;
+    max-width: 320px;
+    margin-bottom: 34px;
+    padding: 16px 20px;
+  }
+
+  .contact-label {
+    margin-bottom: 18px;
+    letter-spacing: 0.16em;
+  }
+
+  .form-input {
+    font-size: 16px;
+    padding: 14px 14px;
+  }
 }
 </style>

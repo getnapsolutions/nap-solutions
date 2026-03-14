@@ -49,7 +49,7 @@ defineEmits(['open-booking'])
 <style scoped>
 .pricing-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(min(100%, 260px), 1fr));
   gap: 22px;
   margin-top: clamp(2rem, 5vw, 3.2rem);
 }
@@ -129,5 +129,27 @@ defineEmits(['open-booking'])
   color: #8892b0;
   margin-top: 28px;
   letter-spacing: 1px;
+}
+
+@media (max-width: 640px) {
+  .pricing-card {
+    padding: 26px 16px 18px;
+    border-radius: 16px;
+  }
+
+  .popular-badge {
+    top: 14px;
+    right: 14px;
+    letter-spacing: 1.2px;
+  }
+
+  .pricing-features {
+    margin-bottom: 22px;
+  }
+
+  .pricing-features li {
+    font-size: 15px;
+    padding: 8px 0;
+  }
 }
 </style>

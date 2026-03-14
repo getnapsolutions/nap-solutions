@@ -3,7 +3,7 @@
 @tailwind utilities;
 
 :root {
-  --content-max: 1180px;
+  --content-max: 1200px;
   --reading-max: 66ch;
   --gutter: clamp(1rem, 2.6vw, 3.75rem);
   --section-space: clamp(4.5rem, 9vw, 7rem);
@@ -283,5 +283,49 @@ h2 {
     animation-duration: 0.01ms !important;
     animation-iteration-count: 1 !important;
     transition-duration: 0.01ms !important;
+  }
+}
+
+@media (max-width: 1024px) {
+  :root {
+    --section-space: clamp(4rem, 8vw, 5.75rem);
+  }
+}
+
+@media (max-width: 768px) {
+  html {
+    scroll-padding-top: 88px;
+  }
+
+  section[id] {
+    scroll-margin-top: 90px;
+  }
+
+  .section-eyebrow {
+    letter-spacing: 0.16em;
+    margin-bottom: 14px;
+  }
+
+  h2 {
+    font-size: clamp(1.82rem, 8.8vw, 2.75rem);
+    line-height: 1.16;
+  }
+
+  .section-sub {
+    line-height: 1.72;
+    margin-bottom: clamp(1.6rem, 5vw, 2.4rem);
+  }
+
+  .btn-primary,
+  .btn-ghost {
+    min-height: 48px;
+    padding: 13px 22px;
+    font-size: 15px;
+  }
+}
+
+@media (max-width: 420px) {
+  :root {
+    --gutter: 0.875rem;
   }
 }
